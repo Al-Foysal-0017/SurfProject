@@ -26,3 +26,56 @@
     width: calc(100vw - 18rem)
 }
 
+
+
+
+
+
+
+
+
+.loading.line:after {
+    content: "/\A–\A\\\A|";
+    text-align: center;
+    -webkit-animation: spin 1s steps(4) infinite;
+    animation: spin 1s steps(4) infinite;
+}
+
+#durationpie {
+  width: 100%;
+  height: 300px;
+}
+
+body {
+  font-family: 'Montserrat';
+}
+
+#refs {
+  width: 100%;
+  height: 600px;
+}
+
+#refseth {
+  width: 100%;
+  height: 600px;
+}
+
+#top20 {
+  width: 100%;
+  height: 400px;
+}
+
+#radar {
+  width: 100%;
+  height: 400px;
+}
+
+#mchart {
+  width: 100%;
+  height: 400px;
+}
+
+#wchart {
+  width: 100%;
+  height: 300px;
+}

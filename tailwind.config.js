@@ -18,8 +18,10 @@ module.exports = {
       lightDark:"#2F3437",
       label:"#747884",
       primary: '#85F9E7',
-      secondary:'red',
+      secondary:'#66B7DC',
       yellow:"#f6c23e",
+      blue:"#6772DC",
+      green:"#05D494"
     },
     height: {
       navHeight: '70px'
