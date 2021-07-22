@@ -4,10 +4,10 @@ import { FaPlug } from 'react-icons/fa';
 import { ImCross } from 'react-icons/im';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import AfterOverview4Item from '../components/AfterOverview4Item';
-import CHART1 from "../components/TVLCHART"
-import CHART2 from "../components/ASSETCHART"
-import CHART3 from "../components/VOLUMECHART"
-import CHART4 from "../components/SWRVCHART"
+// import CHART1 from "../components/TVLCHART"
+// import CHART2 from "../components/ASSETCHART"
+// import CHART3 from "../components/VOLUMECHART"
+// import CHART4 from "../components/SWRVCHART"
 import SidebarSmallScreen from '../components/SidebarSmallScreen';
 import logoImg from "../images/SwerveSurf.png"
 
@@ -56,7 +56,8 @@ const Home = () => {
                 <div className="mt-6">
                     <div className="bg-dark rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-primary tracking-wider" style={{color:"#85F9E7"}}>Total Value Locked</div>
                     <div style={{backgroundColor:"#202526"}} className="bg-primary border-white px-3 pt-3 rounded-b-lg">
-                        <CHART1/>
+                        {/* <CHART1/> */}
+                        <div className="text-3xl">STATS</div>
                     </div>
 
 
@@ -65,7 +66,7 @@ const Home = () => {
                         <div className="bg-dark mt-6 rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-primary tracking-wider" style={{color:"#85F9E7"}}>Assets</div>
                        <div style={{backgroundColor:"#202526"}} className="bg-primary border-white px-3 pt-3 rounded-b-lg">
                         <div className="flex">
-                        <CHART2/>
+                        {/* <CHART2/> */}
                         </div>
                        </div>
                     </div>
@@ -73,7 +74,7 @@ const Home = () => {
                         <div className="bg-dark mt-6 rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-primary tracking-wider" style={{color:"#85F9E7"}}>Volume (Last 7 Days)</div>
                        <div style={{backgroundColor:"#202526"}} className="bg-primary border-white px-3 pt-3 rounded-b-lg">
                         <div className="flex">
-                        <CHART3/>
+                        {/* <CHART3/> */}
                         </div>
                        </div>
                     </div>
@@ -82,7 +83,7 @@ const Home = () => {
 
                     <div className="bg-dark mt-6 rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-primary tracking-wider" style={{color:"#85F9E7"}}>SWRV Holders (Top 100)</div>
                     <div style={{backgroundColor:"#202526"}} className="bg-primary border-white px-3 pt-3 rounded-b-lg">
-                        <CHART4/>
+                        {/* <CHART4/> */}
                     </div>
 
                     <div style={{backgroundColor:"#202526", color:"#747884"}} className="flex justify-center items-center h-full mt-6 bg-primary border-white px-3 py-4 font-medium rounded-t-lg tracking-wider">

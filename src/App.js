@@ -1,17 +1,19 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Navbar from './components/Navbar';
 import Home from './pages/index';
+import Browse from "./pages/Browse"
+import Stats from "./pages/Stats"
 import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggle=()=>{setIsOpen(!isOpen)}
   return (
     <div className="">
       <Router>
-        <Navbar toggle={toggle} isOpen={isOpen}/> 
+        <Navbar/> 
         <Switch>
-        <Route path="/" exact component={() => <Home isOpen={isOpen} />}/>
+        <Route path="/" exact component={Home}/>
+        <Route path="/browse" exact component={Browse}/>
+        <Route path="/stats" exact component={Stats}/>
         </Switch>
       </Router>
     </div>

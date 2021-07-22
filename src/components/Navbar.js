@@ -1,37 +1,33 @@
 import React from 'react'
-import { ImCross } from 'react-icons/im';
 import { FaTwitter } from 'react-icons/fa';
 import { SiDiscord } from 'react-icons/si';
 import { FaGithub } from 'react-icons/fa';
 import { RiWallet3Fill } from 'react-icons/ri';
-// import { Link } from 'react-router-dom'
+import LogoImg from "../images/SwerveSurf.png"
+import {Link} from 'react-router-dom'
 
-const Navbar = ({toggle, isOpen}) => {
+const Navbar = () => {
     return (
         <>
+          <div className="absolute hidden md:flex">
+            <div className=" flex items-center justify-center" style={{height:"69px" , width:"97px"}}>
+            <Link to="/"><img className="" style={{height:"50px" , width:"70px"}} src={LogoImg} alt="SURF"/></Link>
+            </div>
+          </div>
+
          <div className="flex h-navHeight justify-center items-center bg-dark text-white justify-between">
-           <div className=" flex">
-             <div >
-             </div>
-             <div  className={isOpen?"ml-5 flex justify-center items-center":"ml-8 flex justify-center items-center"}>
-              <div className="flex pt-5  pb-5 border-label ">
-                {isOpen?<div className="pl-2.5">SURF</div>:""}
-                <div className="hidden md:flex">
-                  SURF
-                </div>
-              </div>
-              {isOpen ?
-              <ImCross onClick={toggle} className="cursor-pointer w-6 h-6 flex items-end md:hidden ml-12"/>
-              :
-              <svg onClick={toggle} className="cursor-pointer w-6 h-6 flex items-end md:hidden mr-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
-              }
-             </div>  
-           </div>
+           <div className="flex"></div>
            <div className="mr-8 flex">
             <div className="flex">
-            <FaTwitter className="mr-6 cursor-pointer" style={{height:"20px", width:"20px"}}/>
-             <SiDiscord className="mr-6 cursor-pointer" style={{height:"19px", width:"19px"}}/>
-             <FaGithub className="mr-10 cursor-pointer" style={{height:"19px", width:"19px"}}/>
+              <a href="https://twitter.com/defisurf">
+                <FaTwitter className="mr-6 cursor-pointer" style={{height:"20px", width:"20px"}}/>
+              </a>
+              <a href="https://discord.gg/5UmrPNftzQ">
+                <SiDiscord className="mr-6 cursor-pointer" style={{height:"19px", width:"19px"}}/>
+              </a>
+              <a href="https://github.com/defisurf/web">
+                <FaGithub className="mr-10 cursor-pointer" style={{height:"19px", width:"19px"}}/>
+              </a>
             </div>
             <div className="flex pl-4 border-l-2">
              <RiWallet3Fill className="mr-2 cursor-pointer" style={{height:"22px", width:"22px"}}/>
