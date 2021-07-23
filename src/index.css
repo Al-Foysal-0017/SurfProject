@@ -79,3 +79,54 @@ body {
   width: 100%;
   height: 300px;
 }
+
+
+
+
+
+/* css for amchart on stats page */
+.loading.line:after {
+  content: "/\A–\A\\\A|";
+  text-align: center;
+  -webkit-animation: spin 1s steps(4) infinite;
+  animation: spin 1s steps(4) infinite;
+}
+
+#durationpie,#distribution_active {
+width: 100%;
+height: 300px;
+}
+
+body {
+font-family: 'Montserrat';
+}
+
+#refs {
+width: 100%;
+height: 600px;
+}
+
+#refseth {
+width: 100%;
+height: 600px;
+}
+
+#top20,#top10ve {
+width: 100%;
+height: 400px;
+}
+
+#radar {
+width: 100%;
+height: 400px;
+}
+
+#mchart,#testchart {
+width: 100%;
+height: 600px;
+}
+
+#wchart, #nlchart {
+width: 100%;
+height: 400px;
+}

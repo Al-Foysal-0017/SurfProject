@@ -19,9 +19,9 @@ const Sidebar = () => {
         <>
         {/* Big Logo for Long Sidebar */}
         <div style={{marginTop:"-65px"}} className={longSidebar?"absolute bg-dark ml-4 hidden md:flex":"hidden"}>
-            <div className="flex items-center justify-center">
+            <div className="flex ml-3 items-center justify-center">
             <Link to="/">
-            <img className="" style={{height:"65px" , width:"180px"}} src={LogoImg} alt="SURF"/>
+            <img className="" style={{height:"65px" , width:"170px"}} src={LogoImg} alt="SURF"/>
             </Link>
             </div>
         </div>
@@ -29,7 +29,7 @@ const Sidebar = () => {
         <div className={longSidebar ? "w-60 bg-dark" : "w-24 bg-dark"}>
                 {/* DASHBOARD */}
                 <div className="pb-3 pr-4 pl-4 font-bold w-full flex flex-col justify-center text-center bg-dark cursor-pointer">
-                    <div className="border-b-4 border-label"></div>
+                    <div className="border-b-2 border-label"></div>
                     <div className="pt-6 text-xs text-label w-full pl-3 flex">STATS</div>
                     <div className="pt-3 pb-3 font-bold w-full flex flex-col justify-between items-center text-center bg-dark cursor-pointer">
                     <div className="flex w-full justify-between text-white flex-wrap justify-center items-center">
@@ -50,12 +50,12 @@ const Sidebar = () => {
                             <div className="py-4 text-label w-full mt-2 text-md font-light rounded-lg bg-lightDark">
                             <div className="w-full px-4">
                                 <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
-                                {/* <Link to="/stats">Stats</Link> */}Stats
+                                <Link to="/stats">Stats</Link>
                                 </span>
                             </div>
                             <div className="w-full px-4">
                                 <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
-                                {/* <Link to="/browse">Browse</Link> */}Browse
+                                <Link to="/browse">Browse</Link>
                                 </span>
                             </div>
                             </div>:""
@@ -67,12 +67,12 @@ const Sidebar = () => {
                         <div style={{marginTop:"-65px", marginLeft:"55px"}} className="absolute pr-6 text-label mt-2 text-md font-light rounded-lg bg-dark py-4">
                             <div className="w-full px-4">
                                 <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
-                                {/* <Link to="/stats">Stats</Link> */}Stats
+                                <Link to="/stats">Stats</Link>
                                 </span>
                             </div>
                             <div className="w-full px-4">
                                 <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
-                                {/* <Link to="/browse">Browse</Link> */}Browse
+                                <Link to="/browse">Browse</Link>
                                 </span>
                             </div>
                             </div>

@@ -89,7 +89,7 @@ class App extends Component {
   render() {
     return (
     <>
-      <div class="card-body" style={{ width: "100%", height: "320px" }}>
+      <div class="card-body" style={{ width: "100%", height: "420px" }}>
         <div id="wchart"></div>
       </div>
     </>

@@ -18,7 +18,7 @@ const Home = () => {
         {/* Set Sidebar For Small Screen */}
         {showSidebar?
         <div style={{marginTop:"-60px", color:"#fff"}} onClick={()=>{setShowSoidebar(!showSidebar)}} className="w-20 ml-2 z-50 flex md:hidden">
-            <img src={logoImg} alt="" style={{height:"50px"}}/>
+            <img src={logoImg} alt="" style={{height:"40px", marginTop:"3px"}}/>
             <div className="ml-5 bg-dark mb-2 p-3 rounded-full border-2 border-lightDark hover:bg-white transition-all cursor-pointer">
             <ImCross style={{width:"22px", height:"22px", color:"#6772DC"}} />
             </div>

@@ -11,7 +11,9 @@ const Navbar = () => {
         <>
           <div className="absolute hidden md:flex">
             <div className=" flex items-center justify-center" style={{height:"69px" , width:"97px"}}>
-            <Link to="/"><img className="" style={{height:"50px" , width:"70px"}} src={LogoImg} alt="SURF"/></Link>
+            <Link to="/">
+              <img className="" style={{height:"40px" , width:"70px"}} src={LogoImg} alt="SURF"/>
+            </Link>
             </div>
           </div>
 
