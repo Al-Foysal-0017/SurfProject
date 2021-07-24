@@ -4,10 +4,10 @@ import { FaPlug } from 'react-icons/fa';
 import { ImCross } from 'react-icons/im';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import AfterOverview4Item from '../components/AfterOverview4Item';
-import CHART1 from "../components/TVLCHART"
-import CHART2 from "../components/ASSETCHART"
-import CHART3 from "../components/VOLUMECHART"
-import CHART4 from "../components/SWRVCHART"
+import CHART1 from "../components/AllCharts/TVLCHART"
+import CHART2 from "../components/AllCharts/ASSETCHART"
+import CHART3 from "../components/AllCharts/VOLUMECHART"
+import CHART4 from "../components/AllCharts/SWRVCHART"
 import SidebarSmallScreen from '../components/SidebarSmallScreen';
 import logoImg from "../images/SwerveSurf.png"
 

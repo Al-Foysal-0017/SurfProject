@@ -7,7 +7,10 @@ import AfterOverview4ItemStatsPg from '../components/AfterOverview4ItemStatsPg';
 import AfterQuorum4ItemStatsPg from '../components/AfterQuorum4ItemStatsPg';
 import SidebarSmallScreen from '../components/SidebarSmallScreen';
 import logoImg from "../images/SwerveSurf.png"
-import CHART1 from "../components/ChartLockOverTime"
+import CHART1 from "../components/AllCharts/ChartLockOverTime"
+import CHART5 from "../components/AllCharts/ChartVESWRV"
+import CHART2 from "../components/AllCharts/DistrubutionAllLocksChart"
+import CHART3 from "../components/AllCharts/DistributionActiveChart"
 
 const Home = () => {
     const [showSidebar, setShowSoidebar] = React.useState(false)
@@ -67,7 +70,52 @@ const Home = () => {
 
                     <div className="flex md:flex-row flex-col w-full">
                     <div className="w-full md:w-1/2 mr-0 md:mr-3">
-                        <div className="bg-dark mt-6 rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-primary tracking-wider" style={{color:"#85F9E7"}}>Assets</div>
+                        <div className="bg-dark mt-6 rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-primary tracking-wider" style={{color:"#85F9E7"}}>Distribution (All Locks)</div>
+                       <div style={{backgroundColor:"#202526"}} className="bg-primary border-white px-3 pt-3 rounded-b-lg">
+                        <div className="flex">
+                        <CHART2/>
+                        </div>
+                       </div>
+                    </div>
+                    <div className="w-full md:w-1/2 ml-0 md:ml-3">
+                        <div className="bg-dark mt-6 rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-primary tracking-wider" style={{color:"#85F9E7"}}>Distribution (Active Locks)</div>
+                       <div style={{backgroundColor:"#202526"}} className="bg-primary border-white px-3 pt-3 rounded-b-lg">
+                        <div className="flex">
+                        <CHART3/>
+                        </div>
+                       </div>
+                    </div>
+                    </div>
+
+
+
+                    <div className="flex md:flex-row flex-col w-full">
+                    <div className="w-full md:w-1/2 mr-0 md:mr-3">
+                        <div className="bg-dark mt-6 rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-primary tracking-wider" style={{color:"#85F9E7"}}>Top 10 Active Locks (SWRV)</div>
+                       <div style={{backgroundColor:"#202526"}} className="bg-primary border-white px-3 pt-3 rounded-b-lg">
+                        <div className="flex">
+                        {/* <CHART4/> */}
+                        </div>
+                       </div>
+                    </div>
+                    <div className="w-full md:w-1/2 ml-0 md:ml-3">
+                        <div className="bg-dark mt-6 rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-primary tracking-wider" style={{color:"#85F9E7"}}>Top 10 Active Locks (veSWRV)</div>
+                       <div style={{backgroundColor:"#202526"}} className="bg-primary border-white px-3 pt-3 rounded-b-lg">
+                        <div className="flex">
+                        <CHART5/>
+                        </div>
+                       </div>
+                    </div>
+                    </div>
+                    
+{/* 
+                    <div className="bg-dark mt-6 rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-primary tracking-wider" style={{color:"#85F9E7"}}>SWRV Holders (Top 100)</div>
+                    <div style={{backgroundColor:"#202526"}} className="bg-primary border-white px-3 pt-3 rounded-b-lg">
+                        <CHART4/>
+                    </div> */}
+                    <div className="flex md:flex-row flex-col w-full">
+                    <div className="w-full md:w-1/2 mr-0 md:mr-3">
+                        <div className="bg-dark mt-6 rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-primary tracking-wider" style={{color:"#85F9E7"}}>Distribution (All Locks)</div>
                        <div style={{backgroundColor:"#202526"}} className="bg-primary border-white px-3 pt-3 rounded-b-lg">
                         <div className="flex">
                         {/* <CHART2/> */}
@@ -75,7 +123,7 @@ const Home = () => {
                        </div>
                     </div>
                     <div className="w-full md:w-1/2 ml-0 md:ml-3">
-                        <div className="bg-dark mt-6 rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-primary tracking-wider" style={{color:"#85F9E7"}}>Volume (Last 7 Days)</div>
+                        <div className="bg-dark mt-6 rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-primary tracking-wider" style={{color:"#85F9E7"}}>Distribution (Active Locks)</div>
                        <div style={{backgroundColor:"#202526"}} className="bg-primary border-white px-3 pt-3 rounded-b-lg">
                         <div className="flex">
                         {/* <CHART3/> */}
@@ -83,12 +131,9 @@ const Home = () => {
                        </div>
                     </div>
                     </div>
-                    
 
-                    <div className="bg-dark mt-6 rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-primary tracking-wider" style={{color:"#85F9E7"}}>SWRV Holders (Top 100)</div>
-                    <div style={{backgroundColor:"#202526"}} className="bg-primary border-white px-3 pt-3 rounded-b-lg">
-                        {/* <CHART4/> */}
-                    </div>
+
+
 
                     <div style={{backgroundColor:"#202526", color:"#747884"}} className="flex justify-center items-center h-full mt-6 bg-primary border-white px-3 py-4 font-medium rounded-t-lg tracking-wider">
                         <div className="">
