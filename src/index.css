@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 
+.trans{
+  transition: 0.4s ease-in-out;
+}
 
 .fullHeight{
     height: 100vh;
@@ -25,10 +28,6 @@
     margin-left: 30px;
     width: calc(100vw - 18rem)
 }
-
-
-
-
 
 
 

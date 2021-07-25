@@ -11,6 +11,9 @@ import CHART1 from "../components/AllCharts/ChartLockOverTime"
 import CHART5 from "../components/AllCharts/ChartVESWRV"
 import CHART2 from "../components/AllCharts/DistrubutionAllLocksChart"
 import CHART3 from "../components/AllCharts/DistributionActiveChart"
+import CHART4 from "../components/AllCharts/ActiveLocksSWRVTop10"
+import CHART6 from "../components/AllCharts/NewLocks7days"
+import CHART7 from "../components/AllCharts/SWRVLocks7days"
 
 const Home = () => {
     const [showSidebar, setShowSoidebar] = React.useState(false)
@@ -20,13 +23,13 @@ const Home = () => {
         {showSidebar?
         <div style={{marginTop:"-60px", color:"#fff"}} onClick={()=>{setShowSoidebar(!showSidebar)}} className="w-20 ml-2 z-50 flex md:hidden">
             <img src={logoImg} alt="" style={{height:"40px", marginTop:"3px"}}/>
-            <div className="ml-5 bg-dark mb-2 p-3 rounded-full border-2 border-lightDark hover:bg-white transition-all cursor-pointer">
+            <div className="ml-5 trans bg-dark mb-2 p-3 rounded-full border-2 border-lightDark hover:bg-white transition-all cursor-pointer">
             <ImCross style={{width:"22px", height:"22px", color:"#6772DC"}} />
             </div>
         </div>
         :
         <div style={{marginTop:"-60px", color:"#fff"}} onClick={()=>{setShowSoidebar(!showSidebar)}} className="w-20  ml-6 z-50 flex md:hidden">
-            <div className="bg-dark mb-2 p-3 rounded-full border-2 border-lightDark hover:bg-white cursor-pointer">
+            <div className="bg-dark trans mb-2 p-3 rounded-full border-2 border-lightDark hover:bg-white cursor-pointer">
             <GiHamburgerMenu style={{width:"22px", height:"22px", color:"#6772DC"}} />
             </div>
         </div>
@@ -94,7 +97,7 @@ const Home = () => {
                         <div className="bg-dark mt-6 rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-primary tracking-wider" style={{color:"#85F9E7"}}>Top 10 Active Locks (SWRV)</div>
                        <div style={{backgroundColor:"#202526"}} className="bg-primary border-white px-3 pt-3 rounded-b-lg">
                         <div className="flex">
-                        {/* <CHART4/> */}
+                        <CHART4/>
                         </div>
                        </div>
                     </div>
@@ -115,18 +118,18 @@ const Home = () => {
                     </div> */}
                     <div className="flex md:flex-row flex-col w-full">
                     <div className="w-full md:w-1/2 mr-0 md:mr-3">
-                        <div className="bg-dark mt-6 rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-primary tracking-wider" style={{color:"#85F9E7"}}>Distribution (All Locks)</div>
+                        <div className="bg-dark mt-6 rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-primary tracking-wider" style={{color:"#85F9E7"}}>New Locks (Last 7 Days)</div>
                        <div style={{backgroundColor:"#202526"}} className="bg-primary border-white px-3 pt-3 rounded-b-lg">
                         <div className="flex">
-                        {/* <CHART2/> */}
+                        <CHART6/>
                         </div>
                        </div>
                     </div>
                     <div className="w-full md:w-1/2 ml-0 md:ml-3">
-                        <div className="bg-dark mt-6 rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-primary tracking-wider" style={{color:"#85F9E7"}}>Distribution (Active Locks)</div>
+                        <div className="bg-dark mt-6 rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-primary tracking-wider" style={{color:"#85F9E7"}}>SWRV Locks (Last 7 Days)</div>
                        <div style={{backgroundColor:"#202526"}} className="bg-primary border-white px-3 pt-3 rounded-b-lg">
                         <div className="flex">
-                        {/* <CHART3/> */}
+                        <CHART7/>
                         </div>
                        </div>
                     </div>

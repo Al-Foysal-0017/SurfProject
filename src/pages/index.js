@@ -19,13 +19,13 @@ const Home = () => {
         {showSidebar?
         <div style={{marginTop:"-60px", color:"#fff"}} onClick={()=>{setShowSoidebar(!showSidebar)}} className="w-20 ml-2 z-50 flex md:hidden">
             <img src={logoImg} alt="" style={{height:"40px", marginTop:"3px"}}/>
-            <div className="ml-5 bg-dark mb-2 p-3 rounded-full border-2 border-lightDark hover:bg-white transition-all cursor-pointer">
+            <div className="ml-5 trans bg-dark mb-2 p-3 rounded-full border-2 border-lightDark hover:bg-white transition-all cursor-pointer">
             <ImCross style={{width:"22px", height:"22px", color:"#6772DC"}} />
             </div>
         </div>
         :
         <div style={{marginTop:"-60px", color:"#fff"}} onClick={()=>{setShowSoidebar(!showSidebar)}} className="w-20  ml-6 z-50 flex md:hidden">
-            <div className="bg-dark mb-2 p-3 rounded-full border-2 border-lightDark hover:bg-white cursor-pointer">
+            <div className="bg-dark trans mb-2 p-3 rounded-full border-2 border-lightDark hover:bg-white cursor-pointer">
             <GiHamburgerMenu style={{width:"22px", height:"22px", color:"#6772DC"}} />
             </div>
         </div>

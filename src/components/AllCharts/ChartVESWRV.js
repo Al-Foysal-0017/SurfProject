@@ -59,8 +59,8 @@ class App extends Component {
   topveseries.columns.template.width = 0.01;
   topveseries.tooltip.pointerOrientation = "vertical";
   
-  
-  
+  var topbullet = topveseries.bullets.create(am4charts.CircleBullet);
+
   topvechart.cursor = new am4charts.XYCursor();
   
   topvechart.scrollbarX = new am4core.Scrollbar();
