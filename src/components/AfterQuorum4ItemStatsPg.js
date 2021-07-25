@@ -15,7 +15,7 @@ const AfterOverview4Item = () => {
                             </div>
                             <div className="border-green border-l-4 bg-dark flex justify-between items-center pt-7 pb-7 pr-5 pl-5 rounded-lg">
                                 <div>
-                                <div className="text-green text-sm font-bold">ACTIVE VESWRV</div>
+                                <div className="text-green text-sm font-bold">ACTIVE VESWRV <span className="invisible">XXXX</span></div>
                                 <div className="text-2xl font-bold">1,115,654</div>
                                 <div className="text-label pr-3 pt-2 text-sm">veSWRV excluding dead-weight.</div>
                                 </div>
@@ -23,7 +23,7 @@ const AfterOverview4Item = () => {
                             </div>
                             <div className="border-secondary border-l-4 bg-dark flex justify-between items-center pt-7 pb-7 pr-5 pl-5 rounded-lg">
                                 <div>
-                                <div className="text-secondary text-sm font-bold">15% QUORUM</div>
+                                <div className="text-secondary text-sm font-bold">15% QUORUM <span className="invisible">XXXXXXX</span></div>
                                 <div className="text-2xl font-bold">18.96 %</div>
                                 <div className="text-label pr-3 pt-2 text-sm">Participation needed of active veSWRV.</div>
                                 </div>
@@ -31,7 +31,7 @@ const AfterOverview4Item = () => {
                             </div>
                             <div className="border-yellow border-l-4 bg-dark flex justify-between items-center pt-7 pb-7 pr-5 pl-5 rounded-lg">
                                 <div>
-                                <div className="text-yellow text-sm font-bold">30% QUORUM</div>
+                                <div className="text-yellow text-sm font-bold">30% QUORUM <span className="invisible">XXXXXXX</span></div>
                                 <div className="text-2xl font-bold">37.91 %</div>
                                 <div className="text-label pr-3 pt-2 text-sm">Participation needed of active veSWRV.</div>
                                 </div>

@@ -54,7 +54,7 @@ class App extends Component {
     dateAxis.minZoomCount = 5;
 
 
-    var valueAxis = mchart.yAxes.push(new am4charts.ValueAxis());
+    mchart.yAxes.push(new am4charts.ValueAxis());
     //valueAxis.tooltip.disabled = true;
 
     var series = mchart.series.push(new am4charts.LineSeries());

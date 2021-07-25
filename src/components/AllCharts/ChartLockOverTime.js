@@ -17,7 +17,7 @@ class App extends Component {
   // Themes end
   
   
-    var numberFormatter = new am4core.NumberFormatter();
+    // var numberFormatter = new am4core.NumberFormatter();
   
     var backgroundColor = am4core.color("#1e2128");
     var activeColor = am4core.color("#84F8E6");
@@ -54,7 +54,7 @@ class App extends Component {
   
     var currentType;
   
-    var currentTypeName;
+    // var currentTypeName;
   
     
     // main container
@@ -210,13 +210,13 @@ class App extends Component {
     lineChart.legend.y=0;
     lineChart.legend.fontSize = "11px";
     lineChart.legend.itemContainers.template.valign = "middle";
-    var legendDown = false;
+    // var legendDown = false;
     lineChart.legend.itemContainers.template.events.on("down", function() {
-      legendDown = true;
+      // legendDown = true;
     })
     lineChart.legend.itemContainers.template.events.on("up", function() {
       setTimeout(function() {
-        legendDown = false;
+        // legendDown = false;
       }, 100)
     })
   
@@ -228,11 +228,11 @@ class App extends Component {
     seriesTypeSwitch.rightLabel.fill = am4core.color("#ffffff");
   
     seriesTypeSwitch.events.on("down", function() {
-      legendDown = true;
+      // legendDown = true;
     })
     seriesTypeSwitch.events.on("up", function() {
       setTimeout(function() {
-        legendDown = false;
+        // legendDown = false;
       }, 100)
     })
   
@@ -246,7 +246,7 @@ class App extends Component {
          columnSeries[key].hide();
         }
   
-        for (var key in series) {
+        for ( key in series) {
           series[key].hiddenInLegend = true;
           series[key].hide();
         }
@@ -254,12 +254,12 @@ class App extends Component {
         columnSeries[currentType].show();
       }
       else {
-        for (var key in columnSeries) {
+        for ( key in columnSeries) {
           columnSeries[key].hiddenInLegend = true;
           columnSeries[key].hide();
         }
   
-        for (var key in series) {
+        for ( key in series) {
           series[key].hiddenInLegend = false;
           series[key].hide();
         }
@@ -269,18 +269,18 @@ class App extends Component {
       }
     })
   
-    function updateColumnsFill() {
-      columnSeries.active.columns.each(function(column) {
-        if (column.dataItem.values.valueY.previousChange < 0) {
-          column.fillOpacity = 0;
-          column.strokeOpacity = 0.6;
-        }
-        else {
-          column.fillOpacity = 0.6;
-          column.strokeOpacity = 0;
-        }
-      })
-    }
+    // function updateColumnsFill() {
+    //   columnSeries.active.columns.each(function(column) {
+    //     if (column.dataItem.values.valueY.previousChange < 0) {
+    //       column.fillOpacity = 0;
+    //       column.strokeOpacity = 0.6;
+    //     }
+    //     else {
+    //       column.fillOpacity = 0.6;
+    //       column.strokeOpacity = 0;
+    //     }
+    //   })
+    // }
   
   
     // create series
@@ -357,7 +357,7 @@ class App extends Component {
       var bullet = series.bullets.push(new am4charts.CircleBullet());
   
       // only needed to pass it to circle
-      var bulletHoverState = bullet.states.create("hover");
+      // var bulletHoverState = bullet.states.create("hover");
       bullet.setStateOnChildren = true;
   
       bullet.circle.fillOpacity = 1;
@@ -414,7 +414,7 @@ class App extends Component {
     }
   
   
-    var series = { activelocks: activelocksSeries, totallocks: totallocksSeries, expiredlocks: expiredlocksSeries, activeswrv: activeswrvSeries, totalswrv: totalswrvSeries, expiredswrv: expiredswrvSeries, activeveswrv: activeveswrvSeries, totalveswrv: totalveswrvSeries, expiredveswrv: expiredveswrvSeries };
+     series = { activelocks: activelocksSeries, totallocks: totallocksSeries, expiredlocks: expiredlocksSeries, activeswrv: activeswrvSeries, totalswrv: totalswrvSeries, expiredswrv: expiredswrvSeries, activeveswrv: activeveswrvSeries, totalveswrv: totalveswrvSeries, expiredveswrv: expiredveswrvSeries };
   
     var columnSeries;
   
@@ -569,16 +569,16 @@ class App extends Component {
     // change data type (active/confirmed/recovered/deaths)
     function changeDataType(name) {
       currentType = name;
-      currentTypeName = name;
+      // currentTypeName = name;
       if (name !== "deaths") {
-        currentTypeName += " cases";
+        // currentTypeName += " cases";
       }
       // make button active
       var activeButton = buttons[name];
       activeButton.isActive = true;
       // make other buttons inactive
       for (var key in buttons) {
-        if (buttons[key] != activeButton) {
+        if (buttons[key] !== activeButton) {
           buttons[key].isActive = false;
         }
       }
@@ -593,18 +593,18 @@ class App extends Component {
         var currentSeries = columnSeries[name];
         currentSeries.show();
         // hide other series
-        for (var key in columnSeries) {
-          if (columnSeries[key] != currentSeries) {
+        for ( key in columnSeries) {
+          if (columnSeries[key] !== currentSeries) {
             columnSeries[key].hide();
           }
         }
       }
       else {
-        var currentSeries = series[name];
+         currentSeries = series[name];
         currentSeries.show();
         // hide other series
-        for (var key in series) {
-          if (series[key] != currentSeries) {
+        for ( key in series) {
+          if (series[key] !== currentSeries) {
             series[key].hide();
           }
         }

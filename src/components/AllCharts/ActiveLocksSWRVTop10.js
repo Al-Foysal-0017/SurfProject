@@ -61,7 +61,7 @@ class App extends Component {
   topseries.columns.template.width = 0.01;
   topseries.tooltip.pointerOrientation = "vertical";
   
-  var topbullet = topseries.bullets.create(am4charts.CircleBullet);
+  topseries.bullets.create(am4charts.CircleBullet);
   
   topchart.cursor = new am4charts.XYCursor();
   

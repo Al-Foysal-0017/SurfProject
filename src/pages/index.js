@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import Sidebar from "../components/Sidebar"
 import { FaPlug } from 'react-icons/fa';
 import { ImCross } from 'react-icons/im';
@@ -17,15 +18,15 @@ const Home = () => {
         <>
         {/* Set Sidebar For Small Screen */}
         {showSidebar?
-        <div style={{marginTop:"-60px", color:"#fff"}} onClick={()=>{setShowSoidebar(!showSidebar)}} className="w-20 ml-2 z-50 flex md:hidden">
-            <img src={logoImg} alt="" style={{height:"40px", marginTop:"3px"}}/>
-            <div className="ml-5 trans bg-dark mb-2 p-3 rounded-full border-2 border-lightDark hover:bg-white transition-all cursor-pointer">
+        <div style={{marginTop:"-60px", color:"#fff"}} className="w-20 ml-2 z-50 flex md:hidden">
+            <Link to="/"><img className="absolute" src={logoImg} alt="" style={{height:"40px", marginTop:"3px"}}/></Link>
+            <div onClick={()=>{setShowSoidebar(!showSidebar)}} className="ml-24 trans bg-dark mb-2 p-3 rounded-full border-2 border-lightDark hover:bg-white transition-all cursor-pointer">
             <ImCross style={{width:"22px", height:"22px", color:"#6772DC"}} />
             </div>
         </div>
         :
-        <div style={{marginTop:"-60px", color:"#fff"}} onClick={()=>{setShowSoidebar(!showSidebar)}} className="w-20  ml-6 z-50 flex md:hidden">
-            <div className="bg-dark trans mb-2 p-3 rounded-full border-2 border-lightDark hover:bg-white cursor-pointer">
+        <div style={{marginTop:"-60px", color:"#fff"}} className="w-20  ml-6 z-50 flex md:hidden">
+            <div onClick={()=>{setShowSoidebar(!showSidebar)}} className="bg-dark trans mb-2 p-3 rounded-full border-2 border-lightDark hover:bg-white cursor-pointer">
             <GiHamburgerMenu style={{width:"22px", height:"22px", color:"#6772DC"}} />
             </div>
         </div>

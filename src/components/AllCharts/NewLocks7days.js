@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4charts from "@amcharts/amcharts4/charts";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
-import LocksDataNew from "../json/swrv_locks.json"
 import SWRVLocksData from "../json/swrv_locks.json"
 // json/swrv_locks.json
 
@@ -10,17 +9,8 @@ am4core.useTheme(am4themes_animated);
 
 class App extends Component {
   componentDidMount() {
-  var json;
-  var volumes;
-  var topholders;
-  var vl_top;
-  var vl_distribution;
-  var vl_swrv_locks;
   var vl_swrv_locks_7d;
-  var vl_veswrv_top;
-  var vl_distribution_active;
   var covid_total_timeline;
-  var deadweight;
   
 
   // $.when(

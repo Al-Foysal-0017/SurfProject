@@ -50,7 +50,7 @@ const Sidebar = () => {
                             <div className="py-4 text-label w-full mt-2 text-md font-light rounded-lg bg-lightDark">
                             <div className="w-full px-4">
                                 <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
-                                <Link to="/stats">Stats</Link>
+                                <Link to="/">Stats</Link>
                                 </span>
                             </div>
                             <div className="w-full px-4">
@@ -67,7 +67,7 @@ const Sidebar = () => {
                         <div style={{marginTop:"-65px", marginLeft:"55px"}} className="absolute pr-6 text-label mt-2 text-md font-light rounded-lg bg-dark py-4">
                             <div className="w-full px-4">
                                 <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
-                                <Link to="/stats">Stats</Link>
+                                <Link to="/">Stats</Link>
                                 </span>
                             </div>
                             <div className="w-full px-4">
@@ -100,9 +100,14 @@ const Sidebar = () => {
                     {/* Vote-Locking dropdown when long Sidebar */}
                     {longSidebar && showMenuVote?
                         <div className="py-4 text-label w-full mt-2 text-md font-light rounded-lg bg-lightDark">
-                        <div className="w-full px-4"><span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">Come</span></div>
-                        <div className="w-full px-4"><span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">Back</span></div>
-                        <div className="w-full px-4"><span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">Later</span></div>
+                        <div className="w-full px-4">
+                            <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
+                            {/* Come */}
+                            <Link to="/stats">Stats</Link>
+                            </span>
+                        </div>
+                        {/* <div className="w-full px-4"><span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">Back</span></div> */}
+                        {/* <div className="w-full px-4"><span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">Later</span></div> */}
                         </div>:""
                     }
 
@@ -111,19 +116,20 @@ const Sidebar = () => {
                         <div style={{marginTop:"-80px", marginLeft:"55px"}} className="absolute pr-10 text-label mt-2 text-md font-light rounded-lg bg-dark py-4">
                             <div className="w-full flex px-4">
                                 <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
-                                Come
+                                {/* Come */}
+                                <Link to="/stats">Stats</Link>
                                 </span>
                             </div>
-                            <div className="w-full px-4">
+                            {/* <div className="w-full px-4">
                                 <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
                                 Back
                                 </span>
-                            </div>
-                            <div className="w-full px-4">
+                            </div> */}
+                            {/* <div className="w-full px-4">
                                 <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
                                 Later
                                 </span>
-                            </div>
+                            </div> */}
                             </div>
                     </div>
 
@@ -320,10 +326,10 @@ const Sidebar = () => {
 
 
                 {/* Sidebar Bottom */}
-                <div className="text-white pb-3 pr-4 pl-4 font-bold w-full flex flex-col justify-between  bg-dark cursor-pointer" >
+                <div className="text-white pb- pr-4 pl-4 font-bold w-full flex flex-col justify-between  bg-dark cursor-pointer" >
                     <div className="border-b-2 border-label"></div>
                 </div>
-                <div className="p-3 w-full text-center bg-dark pb-10" ></div>
+                <div className="p-3 w-full text-center bg-dark pb-" ></div>
                 <div className="flex bg-dark justify-center text-center w-full">
                     <span onClick={()=>{setLongSidebar(!longSidebar)}} className="hidden cursor-pointer md:inline p-3 mt-14 bg-lightDark rounded-full">
                     {longSidebar ? <FaAngleLeft/>:<FaAngleRight/> }

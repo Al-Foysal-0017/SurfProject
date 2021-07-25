@@ -39,7 +39,7 @@ const Sidebar = () => {
                         <div style={{marginTop:"-65px", marginLeft:"55px"}} className="absolute pr-6 text-label mt-2 text-md font-light rounded-lg bg-dark py-4">
                             <div className="w-full px-4">
                                 <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
-                                <Link to="/stats">Stats</Link>
+                                <Link to="/">Stats</Link>
                                 </span>
                             </div>
                             <div className="w-full px-4">
@@ -76,10 +76,11 @@ const Sidebar = () => {
                         <div style={{marginTop:"-80px", marginLeft:"55px"}} className="absolute pr-10 text-label mt-2 text-md font-light rounded-lg bg-dark py-4">
                             <div className="w-full flex px-4">
                                 <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
-                                Come
+                                {/* Come */}
+                                <Link to="/stats">Stats</Link>
                                 </span>
                             </div>
-                            <div className="w-full px-4">
+                            {/* <div className="w-full px-4">
                                 <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
                                 Back
                                 </span>
@@ -88,7 +89,7 @@ const Sidebar = () => {
                                 <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
                                 Later
                                 </span>
-                            </div>
+                            </div> */}
                             </div>
                     </div>
 
