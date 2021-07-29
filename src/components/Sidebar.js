@@ -4,10 +4,12 @@ import { FaAngleRight, FaAngleDown } from 'react-icons/fa';
 import { FaChartLine } from 'react-icons/fa';
 import { FaLock } from 'react-icons/fa';
 import { IoLinkSharp } from 'react-icons/io5';
-import LogoImg from "../images/SwerveSurf.png"
+import bootLogoImgDrk from "../images/Boot-Logo-Horizontal-Blue.png"
+import bootLogoImg from "../images/Boot-Logo-Horizontal-Main.png"
 import {Link} from 'react-router-dom'
 
 const Sidebar = () => {
+    let dark = localStorage.getItem('theme')=== 'theme-dark';
     const [longSidebar, setLongSidebar] = React.useState(false)
     const [showMenu, setShowMenu] = React.useState(false)
     const [showMenuVote, setShowMenuVote] = React.useState(false)
@@ -18,21 +20,25 @@ const Sidebar = () => {
     return (
         <>
         {/* Big Logo for Long Sidebar */}
-        <div style={{marginTop:"-65px"}} className={longSidebar?"absolute bg-dark ml-4 hidden md:flex":"hidden"}>
-            <div className="flex ml-3 items-center justify-center">
+        <div style={{marginTop:"-65px"}} className={longSidebar ?"absolute ml-4 hidden md:flex":"hidden"}>
+            <div className={dark?"flex bg-dark pl-3 items-center justify-center":"flex bg-white pl-3 items-center justify-center"}>
             <Link to="/">
-            <img className="" style={{height:"65px" , width:"170px"}} src={LogoImg} alt="SURF"/>
+                {dark?
+                    <img className="mt-3 ml-7" style={{height:"35px" , width:"130px"}} src={bootLogoImgDrk} alt="SURF"/>
+                    :
+                    <img className="mt-3 ml-7" style={{height:"35px" , width:"130px"}} src={bootLogoImg} alt="SURF"/>
+                }
             </Link>
             </div>
         </div>
 
-        <div className={longSidebar ? "w-60 bg-dark" : "w-24 bg-dark"}>
+        <div className={dark?(longSidebar? "w-60 bg-dark" : "w-24 bg-dark border-r border-dark"):(longSidebar? "w-60 bg-white" : "w-24 bg-white border-r")}>
                 {/* DASHBOARD */}
-                <div className="pb-3 pr-4 pl-4 font-bold w-full flex flex-col justify-center text-center bg-dark cursor-pointer">
+                <div className="pb-3 pr-4 pl-4 font-bold w-full flex flex-col justify-center text-center cursor-pointer">
                     <div className="border-b-2 border-label"></div>
                     <div className="pt-6 text-xs text-label w-full pl-3 flex">STATS</div>
-                    <div className="pt-3 pb-3 font-bold w-full flex flex-col justify-between items-center text-center bg-dark cursor-pointer">
-                    <div className="flex w-full justify-between text-white flex-wrap justify-center items-center">
+                    <div className="pt-3 pb-3 font-bold w-full flex flex-col justify-between items-center text-center cursor-pointer">
+                    <div className={dark?"flex w-full justify-between text-white flex-wrap justify-center items-center":"flex w-full justify-between text-dark flex-wrap justify-center items-center"}>
                         <div onClick={()=>{setSideshowDB(!sideshowDB) || setSideshowVote(false) || setSideshowLinks(false) }} className={longSidebar?"flex px-3 items-center":"flex flex-col items-center"}>
                             <FaChartLine className="mr-2 mb-1 mt-1"/>
                             <span className="text-sm">Dashboard</span>
@@ -47,7 +53,7 @@ const Sidebar = () => {
                     </div>
                         {/* Dashboard dropdown when long Sidebar */}
                         {longSidebar && showMenu?
-                            <div className="py-4 text-label w-full mt-2 text-md font-light rounded-lg bg-lightDark">
+                            <div className={dark?"py-4 text-label w-full mt-2 text-md font-light rounded-lg bg-lightDark":"py-4 text-white w-full mt-2 text-md font-light rounded-lg bg-label"}>
                             <div className="w-full px-4">
                                 <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
                                 <Link to="/">Stats</Link>
@@ -64,7 +70,7 @@ const Sidebar = () => {
                         
                         {/* Dashboard sideshow when small Sidebar */}
                         <div className={!longSidebar && sideshowDB ?"z-10":"hidden z-10"}>
-                        <div style={{marginTop:"-65px", marginLeft:"55px"}} className="absolute pr-6 text-label mt-2 text-md font-light rounded-lg bg-dark py-4">
+                        <div style={{marginTop:"-65px", marginLeft:"55px"}} className={dark?"absolute pr-6 text-label mt-2 text-md font-light rounded-lg bg-dark py-4":"absolute pr-6 text-white mt-2 text-md font-light rounded-lg bg-label py-4"}>
                             <div className="w-full px-4">
                                 <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
                                 <Link to="/">Stats</Link>
@@ -82,9 +88,9 @@ const Sidebar = () => {
                 </div>
 
                 {/* VOTE LOCKING */}
-                <div className="pb-3 pr-4 pl-4 font-bold w-full flex flex-col justify-center text-center bg-dark cursor-pointer">
-                    <div className="pt-3 pb-3 font-bold w-full flex flex-col justify-between items-center text-center bg-dark cursor-pointer">
-                    <div className="flex w-full justify-between text-white flex-wrap justify-center items-center">
+                <div className="pb-3 pr-4 pl-4 font-bold w-full flex flex-col justify-center text-center cursor-pointer">
+                    <div className="pt-3 pb-3 font-bold w-full flex flex-col justify-between items-center text-center cursor-pointer">
+                    <div className={dark?"flex w-full justify-between text-white flex-wrap justify-center items-center":"flex w-full justify-between text-dark flex-wrap justify-center items-center"}>
                         <div onClick={()=>{setSideshowVote(!sideshowVote) || setSideshowDB(false) || setSideshowLinks(false)}} className={longSidebar?"flex px-3 items-center":"flex flex-col items-center"}>
                             <FaLock className="mr-2 mb-1 mt-1"/>
                             <span className="text-sm">Vote-Locking</span>
@@ -99,7 +105,7 @@ const Sidebar = () => {
                     </div>
                     {/* Vote-Locking dropdown when long Sidebar */}
                     {longSidebar && showMenuVote?
-                        <div className="py-4 text-label w-full mt-2 text-md font-light rounded-lg bg-lightDark">
+                    <div className={dark?"py-2 text-label w-full mt-2 text-md font-light rounded-lg bg-lightDark":"py-2 text-white w-full mt-2 text-md font-light rounded-lg bg-label"}>
                         <div className="w-full px-4">
                             <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
                             {/* Come */}
@@ -113,7 +119,7 @@ const Sidebar = () => {
 
                     {/* Vote-Locking sideshow when small Sidebar */}
                     <div className={!longSidebar && sideshowVote ?"z-10":"hidden z-10"}>
-                        <div style={{marginTop:"-80px", marginLeft:"55px"}} className="absolute pr-10 text-label mt-2 text-md font-light rounded-lg bg-dark py-4">
+                        <div style={{marginTop:"-80px", marginLeft:"55px"}} className={dark?"absolute pr-10 text-label mt-2 text-md font-light rounded-lg bg-dark py-2":"absolute pr-10 text-white mt-2 text-md font-light rounded-lg bg-label py-2"}>
                             <div className="w-full flex px-4">
                                 <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
                                 {/* Come */}
@@ -137,13 +143,13 @@ const Sidebar = () => {
                 </div>
 
                 {/* OFFICIAL LINKS */}
-                <div className="pb-3 pr-4 pl-4 font-bold w-full flex flex-col justify-center text-center bg-dark cursor-pointer">
+                <div className="pb-3 pr-4 pl-4 font-bold w-full flex flex-col justify-center text-center cursor-pointer">
                     <div className="border-b-2 border-label"></div>
                     <div className={longSidebar ? "pt-6 pb-2 text-xs text-label pl-3 w-full flex":"pt-6 pb-1 text-xs text-label w-full flex"}>
                         RESOURCES
                     </div>
-                    <div className="font-bold w-full flex flex-col justify-between items-center text-center bg-dark cursor-pointer">
-                    <div className="flex w-full justify-between text-white flex-wrap justify-center items-center">
+                    <div className="font-bold w-full flex flex-col justify-between items-center text-center cursor-pointer">
+                    <div className={dark?"flex w-full justify-between text-white flex-wrap justify-center items-center":"flex w-full justify-between text-dark flex-wrap justify-center items-center"}>
                         <div onClick={()=>{setSideshowLinks(!sideshowLinks) || setSideshowDB(false) || setSideshowVote(false)}} className={longSidebar?"flex px-3 items-center":"flex flex-col items-center"}>
                             <IoLinkSharp className="mr-2 mb-1 mt-1"/>
                             <span className="text-sm ">
@@ -159,10 +165,9 @@ const Sidebar = () => {
                         </div>
                     </div>
                     {longSidebar && showMenuLinks?
-                        <div className="py-4 text-label w-full mt-2 text-md font-light rounded-lg bg-lightDark">
+                    <div className={dark?"py-4 text-label w-full mt-2 text-md font-light rounded-lg bg-lightDark":"py-4 text-white w-full mt-2 text-md font-light rounded-lg bg-label"}>
                         <div className="w-full px-4">
                             <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
-                                {/* <Link to="https://swerve.fi">Website</Link> */}
                                 <a href="https://swerve.fi" >Website</a>
                             </span>
                         </div>
@@ -182,7 +187,7 @@ const Sidebar = () => {
                             </span>
                         </div>
                         <div className="w-full px-4">
-                            <span className="text-sm text-white text-white pt-1 px-4 flex rounded-md w-full">
+                            <span className={dark?"text-sm text-white text-white pt-1 px-4 flex rounded-md w-full":"text-sm text-black pt-1 px-4 flex rounded-md w-full"}>
                             Social
                             </span>
                         </div>
@@ -202,7 +207,7 @@ const Sidebar = () => {
                             </span>
                         </div>
                         <div className="w-full px-4">
-                                <span className="text-sm text-white text-white pt-1 px-4 flex rounded-md w-full">
+                                <span className={dark?"text-sm text-white text-white pt-1 px-4 flex rounded-md w-full":"text-sm text-black pt-1 px-4 flex rounded-md w-full"}>
                                 Trade
                                 </span>
                         </div>
@@ -242,7 +247,7 @@ const Sidebar = () => {
 
                     {/* OfficialLinks sideshow when small Sidebar */}
                         <div className={!longSidebar && sideshowLinks?"z-10":"hidden z-10"}>
-                        <div style={{marginTop:"-120px", marginLeft:"55px"}} className="absolute pr-10 text-label mt-2 text-md font-light rounded-lg bg-dark py-4">
+                        <div style={{marginTop:"-130px", marginLeft:"55px"}} className={dark?"absolute pr-10 text-label mt-2 text-md font-light rounded-lg bg-dark py-4":"absolute pr-10 text-white mt-2 text-md font-light rounded-lg bg-label py-4"}>
                             <div className="w-full flex px-4">
                                 <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
                                 <a href="https://swerve.fi" >Website</a>
@@ -264,7 +269,7 @@ const Sidebar = () => {
                                 </span>
                             </div>
                             <div className="w-full px-4">
-                                <span className="text-sm text-white text-white pt-1 px-4 flex rounded-md w-full">
+                                <span className={dark?"text-sm text-white text-white pt-1 px-4 flex rounded-md w-full":"text-sm text-black pt-1 px-4 flex rounded-md w-full"}>
                                 Social
                                 </span>
                             </div>
@@ -284,7 +289,7 @@ const Sidebar = () => {
                                 </span>
                             </div>
                             <div className="w-full px-4">
-                                <span className="text-sm text-white text-white pt-1 px-4 flex rounded-md w-full">
+                            <span className={dark?"text-sm text-white text-white pt-1 px-4 flex rounded-md w-full":"text-sm text-black pt-1 px-4 flex rounded-md w-full"}>
                                 Trade
                                 </span>
                             </div>
@@ -326,16 +331,16 @@ const Sidebar = () => {
 
 
                 {/* Sidebar Bottom */}
-                <div className="text-white pb- pr-4 pl-4 font-bold w-full flex flex-col justify-between  bg-dark cursor-pointer" >
+                <div className="text-white pb- pr-4 pl-4 font-bold w-full flex flex-col justify-between cursor-pointer" >
                     <div className="border-b-2 border-label"></div>
                 </div>
-                <div className="p-3 w-full text-center bg-dark pb-" ></div>
-                <div className="flex bg-dark justify-center text-center w-full">
-                    <span onClick={()=>{setLongSidebar(!longSidebar)}} className="hidden cursor-pointer md:inline p-3 mt-14 bg-lightDark rounded-full">
+                <div className="p-3 w-full text-center pb-" ></div>
+                <div className="flex justify-center text-center w-full">
+                    <span onClick={()=>{setLongSidebar(!longSidebar)}} className={dark?"hidden cursor-pointer md:inline p-3 mt-14 bg-lightDark border-2 border-dark rounded-full":"hidden cursor-pointer md:inline p-3 mt-14 bg-lightDar border-2 border-dark rounded-full"}>
                     {longSidebar ? <FaAngleLeft/>:<FaAngleRight/> }
                     </span>
                 </div>
-                <div className="p-3 w-full text-center bg-dark cursor-pointer pb-10" ></div>
+                <div className="p-3 w-full text-center cursor-pointer pb-10" ></div>
 
             </div>
             </>

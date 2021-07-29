@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4charts from "@amcharts/amcharts4/charts";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
+import am4themes_dark from "@amcharts/amcharts4/themes/dark";
 import LocksDataNew from "../json/swrv_locks.json"
 
 am4core.useTheme(am4themes_animated);
-
+let dark = localStorage.getItem('theme')=== 'theme-dark';
 class App extends Component {
   componentDidMount() {
   var covid_total_timeline;
@@ -13,14 +14,15 @@ class App extends Component {
   
   // Themes begin
   am4core.useTheme(am4themes_animated);
-  // am4core.useTheme(am4themes_dark);
+  if(dark){
+    am4core.useTheme(am4themes_dark)
+  }
   // Themes end
   
   
     // var numberFormatter = new am4core.NumberFormatter();
-  
-    var backgroundColor = am4core.color("#1e2128");
-    var activeColor = am4core.color("#84F8E6");
+    var backgroundColor =am4core.color("#1e2128");
+    var activeColor = am4core.color("#5A6BF0");
     var totalColor = am4core.color("#7D66D7");
     var expiredColor = am4core.color("#6794DC");
     var activelocksColor = am4core.color("#84F8E6");
@@ -32,13 +34,15 @@ class App extends Component {
     var activeveswrvColor = am4core.color("#84F8E6");
     var totalveswrvColor = am4core.color("#7D66D7");
     var expiredveswrvColor = am4core.color("#6794DC");
+
   
     // for an easier access by key
     var colors = { activelocks: activelocksColor, totallocks: totallocksColor, expiredlocks: expiredlocksColor, activeswrv: activeswrvColor, totalswrv: totalswrvColor, expiredswrv: expiredswrvColor, activeveswrv: activeveswrvColor, totalveswrv: totalveswrvColor, expiredveswrv: expiredveswrvColor };
   
     // var countryColor = am4core.color("#3b3b3b");
     // var countryStrokeColor = am4core.color("#000000");
-    var buttonStrokeColor = am4core.color("#ffffff");
+    if(dark){var buttonStrokeColor = am4core.color("#fff");}
+    else{buttonStrokeColor = am4core.color("#DB67CE");}
     // var countryHoverColor = am4core.color("#1b1b1b");
     // var activeCountryColor = am4core.color("#0f0f0f");
   
@@ -64,7 +68,8 @@ class App extends Component {
     container.height = am4core.percent(100);
   
     container.tooltip = new am4core.Tooltip();
-    container.tooltip.background.fill = am4core.color("#000000");
+    // container.tooltip.background.fill = am4core.color("#000000");
+    container.tooltip.background.fill = am4core.color("#fff");
     container.tooltip.background.stroke = activeColor;
     container.tooltip.fontSize = "0.9em";
     container.tooltip.getFillFromObject = false;
@@ -97,7 +102,11 @@ class App extends Component {
     chartAndSliderContainer.height = am4core.percent(100);
     chartAndSliderContainer.width = am4core.percent(100);
     chartAndSliderContainer.background = new am4core.RoundedRectangle();
-    chartAndSliderContainer.background.fill = am4core.color("#000000");
+    if(dark){
+      chartAndSliderContainer.background.fill = am4core.color("#000000");
+    }else{
+      chartAndSliderContainer.background.fill = am4core.color("#fff");
+    }
     chartAndSliderContainer.background.cornerRadius(30, 30, 0, 0)
     chartAndSliderContainer.background.fillOpacity = 0.25;
     chartAndSliderContainer.paddingTop = 30;
@@ -114,7 +123,12 @@ class App extends Component {
     slider.valign = "middle";
     slider.background.opacity = 0.4;
     slider.opacity = 0.7;
-    slider.background.fill = am4core.color("#ffffff");
+    if(dark){
+      slider.background.fill = am4core.color("#fff");
+    }
+    else{
+      slider.background.fill = am4core.color("#000");
+    }
     slider.marginLeft = 20;
     slider.marginRight = 35;
     slider.height = 15;
@@ -170,7 +184,11 @@ class App extends Component {
     valueAxis.maxPrecision = 0;
     valueAxis.renderer.inside = true;
     valueAxis.renderer.labels.template.verticalCenter = "bottom";
-    valueAxis.renderer.labels.template.fill = am4core.color("#ffffff");
+    if(dark){
+      valueAxis.renderer.labels.template.fill = am4core.color("#ffffff");
+    }else{
+      valueAxis.renderer.labels.template.fill = am4core.color("#5A6BF0");
+    }
     valueAxis.renderer.labels.template.padding(2, 2, 2, 2);
     valueAxis.adapter.add("max", function(max, target) {
       if (max < 5) {

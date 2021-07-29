@@ -7,6 +7,8 @@ import am4themes_dark from "@amcharts/amcharts4/themes/dark";
 
 am4core.useTheme(am4themes_animated);
 
+let dark = localStorage.getItem('theme')=== 'theme-dark';
+
 class App extends Component {
   componentDidMount() {
   //start data parsing
@@ -14,7 +16,9 @@ class App extends Component {
   vl_distribution = SWRVLoksDistributionData;
 
   am4core.useTheme(am4themes_animated);
-  am4core.useTheme(am4themes_dark);
+  if(dark){
+    am4core.useTheme(am4themes_dark)
+  }
 
   //Pie Chart Distribution
   var chart = am4core.create("durationpie", am4charts.PieChart3D);

@@ -1,43 +1,26 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import Sidebar from "../components/Sidebar"
 import TableBrowsePg from '../components/TableBrowsePg';
 import { FaPlug, FaDownload } from 'react-icons/fa';
 import { ImCross } from 'react-icons/im';
-import { GiHamburgerMenu } from 'react-icons/gi';
 import { BsFillCaretUpFill, BsFillCaretDownFill } from "react-icons/bs";
 import SidebarSmallScreen from '../components/SidebarSmallScreen';
-import logoImg from "../images/SwerveSurf.png"
 import gitcoinlogo from "../images/gitcoinlogo.png"
-// import { Link } from 'react-router-dom';
+import SetSmallSidebar from '../components/SetSmallSidebar';
+import Footer from '../components/Footer';
 
 const Home = () => {
+    let dark = localStorage.getItem('theme')=== 'theme-dark';
     const [showSidebar, setShowSoidebar] = React.useState(false);
     const [showMsg, setShowMsg] = React.useState(true);
     const [toggle, setToggle] = React.useState(false);
     const [valueEntries, setValueEntries] = React.useState(10);
-    console.log("VALUE:>>>>", valueEntries)
     return (
         <div>
         {/* Set Sidebar For Small Screen */}
-        {showSidebar?
-        <div style={{marginTop:"-60px", color:"#fff"}} className="w-20 ml-2 z-50 flex md:hidden">
-            <Link to="/"><img className="absolute" src={logoImg} alt="" style={{height:"40px", marginTop:"3px"}}/></Link>
-            <div onClick={()=>{setShowSoidebar(!showSidebar)}} className="ml-24 trans bg-dark mb-2 p-3 rounded-full border-2 border-lightDark hover:bg-white transition-all cursor-pointer">
-            <ImCross style={{width:"22px", height:"22px", color:"#6772DC"}} />
-            </div>
-        </div>
-        :
-        <div style={{marginTop:"-60px", color:"#fff"}} className="w-20  ml-6 z-50 flex md:hidden">
-            <div onClick={()=>{setShowSoidebar(!showSidebar)}} className="bg-dark trans mb-2 p-3 rounded-full border-2 border-lightDark hover:bg-white cursor-pointer">
-            <GiHamburgerMenu style={{width:"22px", height:"22px", color:"#6772DC"}} />
-            </div>
-        </div>
-        }
-
+        <SetSmallSidebar showSidebar={showSidebar} setShowSoidebar={setShowSoidebar}/>
 
         <div className="flex">
-           {/* For sidebar here wide also set in sidebar component */}
             <div className="hidden md:flex">
                 <Sidebar/>
             </div>
@@ -45,11 +28,11 @@ const Home = () => {
                 <SidebarSmallScreen/>
             </div>
 
-            <div className="flex flex-col justify-between text-white w-full bg-lightDark px-6">
+            <div className={dark?"flex flex-col justify-between text-white w-full bg-lightDark px-6":"flex flex-col justify-between text-white w-full bg-bgLight px-6"}>
                 <div>
                 <div className="mt-6"></div>
                 <div className="flex w-full justify-between items-center">
-                    <div style={{backgroundColor:"#D2F4E8"}} className={showMsg? "mb-3 py-3 px-6 w-full flex justify-between cursor-pointer rounded-lg":"hidden"}>
+                    <div style={{backgroundColor:"#D2F4E8"}} className={showMsg? "border mb-3 py-3 px-6 w-full flex justify-between cursor-pointer rounded-lg":"hidden"}>
                     <div className="flex">
                     <img src={gitcoinlogo} alt="" style={{height:"25px", width:"25px"}} />
                     <div className="ml-2 text-blue text-lg">Support DeFi SURF on Gitcoin Grants!</div>
@@ -58,13 +41,13 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="flex bg-dark w-full justify-between items-center">
-                    <div className="tracking-wide bg-lightDark w-full flex justify-between cursor-pointer">
+                <div className="flex w-full justify-between items-center">
+                    <div className="tracking-wide w-full flex justify-between cursor-pointer">
                     <div className="flex">
                     <div className="text-primary text-3xl text-semibold">Browse Historical TVL Data</div>
                     </div>
                     <div className="text-lightDark flex items-center hover:text-black">
-                    <div className="hidden md:flex bg-primary flex justify-center items-center text-label pt-0.5 pb-0.5 pr-3 pl-3 rounded hover:bg-yellow transition-all">
+                    <div className={dark?"hidden md:flex bg-primary flex justify-center items-center text-white pt-0.5 pb-0.5 pr-3 pl-3 border border-primary rounded hover:bg-white hover:text-primary trans":"hidden md:flex bg-white flex justify-center items-center text-primary pt-0.5 pb-0.5 pr-3 pl-3 border border-primary rounded hover:bg-primary hover:text-white trans"}>  
                         <FaPlug className="mr-1"/>
                         <button>Connect Wallet</button>
                     </div>
@@ -72,8 +55,8 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="mt-3 flex bg-dark w-full justify-between items-center">
-                    <div className="tracking-wide bg-lightDark w-full flex justify-between cursor-pointer">
+                <div className="mt-3 flex w-full justify-between items-center">
+                    <div className="tracking-wide w-full flex justify-between cursor-pointer">
                     <div className="flex bg-green items-center text-lightDark px-3 py-1 rounded">
                     <FaDownload/>
                     <div className="pl-2 text-md text-semibold">Download JSON</div>
@@ -82,8 +65,10 @@ const Home = () => {
                 </div>
 
                 <div className="mt-5"></div>
-                <div className="mt-6 text-underlinecl">
-                    <div className="bg-dark rounded-t-lg py-3 pl-5 text-blue text-md font-bold tracking-wider">All Data</div>
+                <div className="mt-6 text-underlinecl shadow-2xl">
+                    <div className={dark?"bg-dark rounded-t-lg py-3 pl-5 text-blue text-md font-bold tracking-wider":"bg-label rounded-t-lg py-3 pl-5 text-white text-md font-bold tracking-wider"}>
+                        All Data
+                    </div>
                     <div className="bg-white overflow-x-auto pb-5 text-black px-5 pt-3 rounded-b-lg">
                     <div className="flex justify-between pb-3 pt-2">
                         <div className="flex items-center">
@@ -131,13 +116,8 @@ const Home = () => {
                 </div>
                 </div>
 
-
                 <div className="mt-6">
-                    <div style={{backgroundColor:"#202526", color:"#747884"}} className="flex justify-center items-center h-full mt-6 bg-primary border-white px-3 py-4 font-medium rounded-t-lg tracking-wider">
-                        <div className="">
-                        <span>Copyright &copy; 2021 DeFi.SURF</span>
-                        </div>
-                    </div>
+                    <Footer/>
                 </div>
             </div>
         </div>
