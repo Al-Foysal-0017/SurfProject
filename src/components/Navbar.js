@@ -45,7 +45,7 @@ const Navbar = () => {
 
             <div className="flex pl-4 border-l-2">
              <RiWallet3Fill className="mr-2 cursor-pointer" style={{height:"22px", width:"22px"}}/>
-             <div className="hidden md:flex text-sm text-label">Not Connected</div>
+             <div className="hidden flex items-center md:flex text-sm text-label">Not Connected</div>
             </div>
            </div>
          </div>

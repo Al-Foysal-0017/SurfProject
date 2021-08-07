@@ -53,7 +53,7 @@ const Sidebar = () => {
                     </div>
                         {/* Dashboard dropdown when long Sidebar */}
                         {longSidebar && showMenu?
-                            <div className={dark?"py-4 text-label w-full mt-2 text-md font-light rounded-lg bg-lightDark":"py-4 text-white w-full mt-2 text-md font-light rounded-lg bg-label"}>
+                            <div className={dark?"py-4 text-label w-full mt-2 text-md font-light rounded-lg bg-lightDark":"py-4 text-white border shadow-md border-violet w-full mt-2 text-md font-light rounded-lg bg-violet"}>
                             <div className="w-full px-4">
                                 <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
                                 <Link to="/">Stats</Link>
@@ -70,7 +70,7 @@ const Sidebar = () => {
                         
                         {/* Dashboard sideshow when small Sidebar */}
                         <div className={!longSidebar && sideshowDB ?"z-10":"hidden z-10"}>
-                        <div style={{marginTop:"-65px", marginLeft:"55px"}} className={dark?"absolute pr-6 text-label mt-2 text-md font-light rounded-lg bg-dark py-4":"absolute pr-6 text-white mt-2 text-md font-light rounded-lg bg-label py-4"}>
+                        <div style={{marginTop:"-70px", marginLeft:"44px"}} className={dark?"absolute pr-6 text-label mt-2 text-md font-light rounded-lg bg-dark py-4":"absolute pr-6 text-white mt-2 text-md font-light rounded-lg bg-violet py-4"}>
                             <div className="w-full px-4">
                                 <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
                                 <Link to="/">Stats</Link>
@@ -105,7 +105,7 @@ const Sidebar = () => {
                     </div>
                     {/* Vote-Locking dropdown when long Sidebar */}
                     {longSidebar && showMenuVote?
-                    <div className={dark?"py-2 text-label w-full mt-2 text-md font-light rounded-lg bg-lightDark":"py-2 text-white w-full mt-2 text-md font-light rounded-lg bg-label"}>
+                    <div className={dark?"py-5 text-label w-full mt-2 text-md font-light rounded-lg bg-lightDark":"py-5 text-white w-full mt-2 text-md font-light rounded-lg bg-violet"}>
                         <div className="w-full px-4">
                             <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
                             {/* Come */}
@@ -119,7 +119,7 @@ const Sidebar = () => {
 
                     {/* Vote-Locking sideshow when small Sidebar */}
                     <div className={!longSidebar && sideshowVote ?"z-10":"hidden z-10"}>
-                        <div style={{marginTop:"-80px", marginLeft:"55px"}} className={dark?"absolute pr-10 text-label mt-2 text-md font-light rounded-lg bg-dark py-2":"absolute pr-10 text-white mt-2 text-md font-light rounded-lg bg-label py-2"}>
+                        <div style={{marginTop:"-70px", marginLeft:"44px"}} className={dark?"absolute pr-10 text-label mt-2 text-md font-light rounded-lg bg-dark py-5":"absolute pr-10 text-white mt-2 text-md font-light rounded-lg bg-violet py-5"}>
                             <div className="w-full flex px-4">
                                 <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
                                 {/* Come */}
@@ -164,8 +164,9 @@ const Sidebar = () => {
                         }
                         </div>
                     </div>
+                    {/* OfficialLinks sideshow when long Sidebar */}
                     {longSidebar && showMenuLinks?
-                    <div className={dark?"py-4 text-label w-full mt-2 text-md font-light rounded-lg bg-lightDark":"py-4 text-white w-full mt-2 text-md font-light rounded-lg bg-label"}>
+                    <div className={dark?"py-4 text-label w-full mt-2 text-md font-light rounded-lg bg-lightDark":"py-4 text-white w-full mt-2 text-md font-light rounded-lg bg-violet"}>
                         <div className="w-full px-4">
                             <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
                                 <a href="https://swerve.fi" >Website</a>
@@ -187,7 +188,7 @@ const Sidebar = () => {
                             </span>
                         </div>
                         <div className="w-full px-4">
-                            <span className={dark?"text-sm text-white text-white pt-1 px-4 flex rounded-md w-full":"text-sm text-black pt-1 px-4 flex rounded-md w-full"}>
+                            <span className={dark?"text-sm text-white text-white pt-1 px-4 flex rounded-md w-full":"text-sm text-label pt-1 px-4 flex rounded-md w-full"}>
                             Social
                             </span>
                         </div>
@@ -207,7 +208,7 @@ const Sidebar = () => {
                             </span>
                         </div>
                         <div className="w-full px-4">
-                                <span className={dark?"text-sm text-white text-white pt-1 px-4 flex rounded-md w-full":"text-sm text-black pt-1 px-4 flex rounded-md w-full"}>
+                                <span className={dark?"text-sm text-white text-white pt-1 px-4 flex rounded-md w-full":"text-sm text-label pt-1 px-4 flex rounded-md w-full"}>
                                 Trade
                                 </span>
                         </div>
@@ -247,7 +248,7 @@ const Sidebar = () => {
 
                     {/* OfficialLinks sideshow when small Sidebar */}
                         <div className={!longSidebar && sideshowLinks?"z-10":"hidden z-10"}>
-                        <div style={{marginTop:"-130px", marginLeft:"55px"}} className={dark?"absolute pr-10 text-label mt-2 text-md font-light rounded-lg bg-dark py-4":"absolute pr-10 text-white mt-2 text-md font-light rounded-lg bg-label py-4"}>
+                        <div style={{marginTop:"-130px", marginLeft:"44px"}} className={dark?"absolute pr-10 text-label mt-2 text-md font-light rounded-lg bg-dark py-4":"absolute pr-10 text-white mt-2 text-md font-light rounded-lg bg-violet py-4"}>
                             <div className="w-full flex px-4">
                                 <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
                                 <a href="https://swerve.fi" >Website</a>
@@ -269,7 +270,7 @@ const Sidebar = () => {
                                 </span>
                             </div>
                             <div className="w-full px-4">
-                                <span className={dark?"text-sm text-white text-white pt-1 px-4 flex rounded-md w-full":"text-sm text-black pt-1 px-4 flex rounded-md w-full"}>
+                                <span className={dark?"text-sm text-white text-white pt-1 px-4 flex rounded-md w-full":"text-sm text-label pt-1 px-4 flex rounded-md w-full"}>
                                 Social
                                 </span>
                             </div>
@@ -289,7 +290,7 @@ const Sidebar = () => {
                                 </span>
                             </div>
                             <div className="w-full px-4">
-                            <span className={dark?"text-sm text-white text-white pt-1 px-4 flex rounded-md w-full":"text-sm text-black pt-1 px-4 flex rounded-md w-full"}>
+                            <span className={dark?"text-sm text-white text-white pt-1 px-4 flex rounded-md w-full":"text-sm text-label pt-1 px-4 flex rounded-md w-full"}>
                                 Trade
                                 </span>
                             </div>

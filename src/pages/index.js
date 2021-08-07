@@ -29,7 +29,7 @@ const Home = () => {
 
             <div className={dark? "text-white w-full bg-lightDark px-6":"text-white w-full bg-bgLight px-6"}>
                 <div className="flex w-full justify-between items-center">
-                    <div className="text-primary text-3xl font-semibold pt-5 pb-5 tracking-wider">Overview</div>
+                    <div className="SclFont text-primary text-3xl font-semibold pt-5 pb-5 tracking-wider">Overview</div>
                     <div className={dark?"hidden md:flex bg-primary flex justify-center items-center text-white pt-0.5 pb-0.5 pr-3 pl-3 border border-primary rounded hover:bg-white hover:text-primary trans":"hidden md:flex bg-white flex justify-center items-center text-primary pt-0.5 pb-0.5 pr-3 pl-3 border border-primary rounded hover:bg-primary hover:text-white trans"}>
                         <FaPlug className="mr-1"/>
                         <button>Connect Wallet</button>
@@ -39,17 +39,17 @@ const Home = () => {
                 <AfterOverview4Item/>
                 
                 <div className="mt-6">
-                    <div className={dark? "bg-dark rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-secondary tracking-wider":"bg-label rounded-t-lg py-3 pl-5 text-white text-lg font-bold border-b-2 border-label tracking-wider"}>
+                    <div className={dark? "bg-dark rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-secondary tracking-wider":"bg-violet rounded-t-lg py-3 pl-5 text-white text-lg font-bold border-b-2 border-violet tracking-wider"}>
                         Total Value Locked
                     </div>
-                    <div className={dark ? "bg-dark border-white px-3 pt-3 rounded-b-lg" : "bg-white shadow-xl border-label px-3 pt-3 rounded-b-lg"}>
+                    <div className={dark ? "bg-dark border-white px-3 pt-3 rounded-b-lg" : "bg-white shadow-xl border-violet px-3 pt-3 rounded-b-lg"}>
                         <CHART1/>
                     </div>
 
 
                     <div className="flex md:flex-row flex-col w-full">
                     <div className="w-full md:w-1/2 mr-0 md:mr-3">
-                        <div className={dark? "mt-6 bg-dark rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-secondary tracking-wider":"mt-6 bg-label rounded-t-lg py-3 pl-5 text-white text-lg font-bold border-b-2 border-label tracking-wider"}>   
+                        <div className={dark? "mt-6 bg-dark rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-secondary tracking-wider":"mt-6 bg-violet rounded-t-lg py-3 pl-5 text-white text-lg font-bold border-b-2 border-violet tracking-wider"}>   
                             Assets
                         </div>
                        <div className={dark ? "bg-dark border-white px-3 pt-3 rounded-b-lg" : "bg-white shadow-xl border-white px-3 pt-3 rounded-b-lg"}>
@@ -59,8 +59,8 @@ const Home = () => {
                        </div>
                     </div>
                     <div className="w-full md:w-1/2 ml-0 md:ml-3">
-                        <div className={dark? "mt-6 bg-dark rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-secondary tracking-wider":"mt-6 bg-label rounded-t-lg py-3 pl-5 text-white text-lg font-bold border-b-2 border-label tracking-wider"}>      
-                            Volume (Last 7 Days)
+                        <div className={dark? "mt-6 bg-dark rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-secondary tracking-wider":"mt-6 bg-violet rounded-t-lg py-3 pl-5 text-white text-lg font-bold border-b-2 border-violet tracking-wider"}>      
+                            Volume ( Last 7 Days )
                         </div>
                        <div className={dark ? "bg-dark border-white px-3 pt-3 rounded-b-lg" : "bg-white shadow-xl border-white px-3 pt-3 rounded-b-lg"}> 
                         <div className="flex">
@@ -70,8 +70,8 @@ const Home = () => {
                     </div>
                     </div>
                     
-                    <div className={dark? "mt-6 bg-dark rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-secondary tracking-wider":"mt-6 bg-label rounded-t-lg py-3 pl-5 text-white text-lg font-bold border-b-2 border-label tracking-wider"}>
-                        SWRV Holders (Top 100)
+                    <div className={dark? "mt-6 bg-dark rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-secondary tracking-wider":"mt-6 bg-violet rounded-t-lg py-3 pl-5 text-white text-lg font-bold border-b-2 border-violet tracking-wider"}>
+                        Boot Holders ( Top 100 )
                     </div>
                     <div className={dark ? "bg-dark border-white px-3 pt-3 rounded-b-lg" : "bg-white shadow-xl border-white px-3 pt-3 rounded-b-lg"}>   
                         <CHART4/>

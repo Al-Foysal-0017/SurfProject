@@ -14,6 +14,7 @@ module.exports = {
       indigo: colors.indigo,
       red: colors.rose,
       // yellow: colors.amber,
+      yellow:"#f6c23e",
       dark:"#161819",
       lightDark:"#2F3437",
       // label:"#747884",
@@ -22,10 +23,10 @@ module.exports = {
       primary: '#5A6BF0',
       // secondary:'#66B7DC',
       secondary:'#85F9E7',
-      yellow:"#f6c23e",
       blue:"#6772DC",
       green:"#05D494",
-      bgLight: "#F7F8FD"
+      bgLight: "#F7F8FD",
+      violet: "#080A2B"
     },
     height: {
       navHeight: '70px'

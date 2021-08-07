@@ -48,7 +48,7 @@ const Home = () => {
                 <AfterQuorum4ItemStatsPg/>
                 
                 <div className="mt-6">
-                    <div className={dark? "bg-dark rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-secondary tracking-wider":"bg-label rounded-t-lg py-3 pl-5 text-white text-lg font-bold border-b-2 border-label tracking-wider"}>    
+                    <div className={dark? "bg-dark rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-secondary tracking-wider":"bg-violet rounded-t-lg py-3 pl-5 text-white text-lg font-bold border-b-2 border-violet tracking-wider"}>    
                         Locks Over Time
                     </div>
                     <div className={dark ? "bg-dark border-white px-3 pt-3 rounded-b-lg" : "bg-white shadow-xl border-white px-3 pt-3 rounded-b-lg"}>
@@ -58,7 +58,7 @@ const Home = () => {
 
                     <div className="flex md:flex-row flex-col w-full">
                     <div className="w-full md:w-1/2 mr-0 md:mr-3">
-                    <div className={dark? "mt-6 bg-dark rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-secondary tracking-wider":"mt-6 bg-label rounded-t-lg py-3 pl-5 text-white text-lg font-bold border-b-2 border-label tracking-wider"}>
+                    <div className={dark? "mt-6 bg-dark rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-secondary tracking-wider":"mt-6 bg-violet rounded-t-lg py-3 pl-5 text-white text-lg font-bold border-b-2 border-violet tracking-wider"}>
                             Distribution (All Locks)
                         </div>
                         <div className={dark ? "bg-dark border-white px-3 pt-3 rounded-b-lg" : "bg-white shadow-xl border-white px-3 pt-3 rounded-b-lg"}>
@@ -68,7 +68,7 @@ const Home = () => {
                        </div>
                     </div>
                     <div className="w-full md:w-1/2 ml-0 md:ml-3">
-                    <div className={dark? "mt-6 bg-dark rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-secondary tracking-wider":"mt-6 bg-label rounded-t-lg py-3 pl-5 text-white text-lg font-bold border-b-2 border-label tracking-wider"}>
+                    <div className={dark? "mt-6 bg-dark rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-secondary tracking-wider":"mt-6 bg-violet rounded-t-lg py-3 pl-5 text-white text-lg font-bold border-b-2 border-violet tracking-wider"}>
                             Distribution (Active Locks)
                         </div>
                         <div className={dark ? "bg-dark border-white px-3 pt-3 rounded-b-lg" : "bg-white shadow-xl border-white px-3 pt-3 rounded-b-lg"}>
@@ -83,7 +83,7 @@ const Home = () => {
 
                     <div className="flex md:flex-row flex-col w-full">
                     <div className="w-full md:w-1/2 mr-0 md:mr-3">
-                    <div className={dark? "mt-6 bg-dark rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-secondary tracking-wider":"mt-6 bg-label rounded-t-lg py-3 pl-5 text-white text-lg font-bold border-b-2 border-label tracking-wider"}>
+                    <div className={dark? "mt-6 bg-dark rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-secondary tracking-wider":"mt-6 bg-violet rounded-t-lg py-3 pl-5 text-white text-lg font-bold border-b-2 border-violet tracking-wider"}>
                             Top 10 Active Locks (SWRV)
                         </div>
                         <div className={dark ? "bg-dark border-white px-3 pt-3 rounded-b-lg" : "bg-white shadow-xl border-white px-3 pt-3 rounded-b-lg"}>
@@ -93,7 +93,7 @@ const Home = () => {
                        </div>
                     </div>
                     <div className="w-full md:w-1/2 ml-0 md:ml-3">
-                        <div className={dark? "mt-6 bg-dark rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-secondary tracking-wider":"mt-6 bg-label rounded-t-lg py-3 pl-5 text-white text-lg font-bold border-b-2 border-label tracking-wider"}>
+                        <div className={dark? "mt-6 bg-dark rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-secondary tracking-wider":"mt-6 bg-violet rounded-t-lg py-3 pl-5 text-white text-lg font-bold border-b-2 border-violet tracking-wider"}>
                             Top 10 Active Locks (veSWRV)
                         </div>
                         <div className={dark ? "bg-dark border-white px-3 pt-3 rounded-b-lg" : "bg-white shadow-xl border-white px-3 pt-3 rounded-b-lg"}>
@@ -106,7 +106,7 @@ const Home = () => {
 
                     <div className="flex md:flex-row flex-col w-full">
                     <div className="w-full md:w-1/2 mr-0 md:mr-3">
-                        <div className={dark? "mt-6 bg-dark rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-secondary tracking-wider":"mt-6 bg-label rounded-t-lg py-3 pl-5 text-white text-lg font-bold border-b-2 border-label tracking-wider"}>
+                        <div className={dark? "mt-6 bg-dark rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-secondary tracking-wider":"mt-6 bg-violet rounded-t-lg py-3 pl-5 text-white text-lg font-bold border-b-2 border-violet tracking-wider"}>
                             New Locks (Last 7 Days)
                         </div>
                         <div className={dark ? "bg-dark border-white px-3 pt-3 rounded-b-lg" : "bg-white shadow-xl border-white px-3 pt-3 rounded-b-lg"}>
@@ -116,7 +116,7 @@ const Home = () => {
                        </div>
                     </div>
                     <div className="w-full md:w-1/2 ml-0 md:ml-3">
-                    <div className={dark? "mt-6 bg-dark rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-secondary tracking-wider":"mt-6 bg-label rounded-t-lg py-3 pl-5 text-white text-lg font-bold border-b-2 border-label tracking-wider"}>
+                    <div className={dark? "mt-6 bg-dark rounded-t-lg py-3 pl-5 text-secondary text-lg font-bold border-b-2 border-secondary tracking-wider":"mt-6 bg-violet rounded-t-lg py-3 pl-5 text-white text-lg font-bold border-b-2 border-violet tracking-wider"}>
                             SWRV Locks (Last 7 Days)
                         </div>
                         <div className={dark ? "bg-dark border-white px-3 pt-3 rounded-b-lg" : "bg-white shadow-xl border-white px-3 pt-3 rounded-b-lg"}>

@@ -37,7 +37,7 @@ const Sidebar = () => {
 
                         {/* Dashboard sideshow when small Sidebar */}
                         <div className={sideshowDB ?"z-10":"hidden z-10"}>
-                        <div style={{marginTop:"-65px", marginLeft:"55px"}} className={dark?"absolute pr-6 text-label mt-2 text-md font-light rounded-lg bg-dark py-4":"absolute pr-6 text-white mt-2 text-md font-light rounded-lg bg-label py-4"}>
+                        <div style={{marginTop:"-65px", marginLeft:"44px"}} className={dark?"absolute pr-6 text-label mt-2 text-md font-light rounded-lg bg-dark py-4":"absolute pr-6 text-white mt-2 text-md font-light rounded-lg bg-violet py-4"}>
                             <div className="w-full px-4">
                                 <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
                                 <Link to="/">Stats</Link>
@@ -74,7 +74,7 @@ const Sidebar = () => {
 
                     {/* Vote-Locking sideshow when small Sidebar */}
                     <div className={sideshowVote ?"z-10":"hidden z-10"}>
-                        <div style={{marginTop:"-65px", marginLeft:"55px"}} className={dark?"absolute pr-10 text-label mt-2 text-md font-light rounded-lg bg-dark py-2":"absolute pr-10 text-white mt-2 text-md font-light rounded-lg bg-label py-2"}>
+                        <div style={{marginTop:"-65px", marginLeft:"44px"}} className={dark?"absolute pr-10 text-label mt-2 text-md font-light rounded-lg bg-dark py-6":"absolute pr-10 text-white mt-2 text-md font-light rounded-lg bg-violet py-6"}>
                             <div className="w-full flex px-4">
                                 <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
                                 {/* Come */}
@@ -121,7 +121,7 @@ const Sidebar = () => {
 
                     {/* OfficialLinks sideshow when small Sidebar */}
                         <div className={ sideshowLinks?"z-10":"hidden z-10"}>
-                        <div style={{marginTop:"-120px", marginLeft:"55px"}} className={dark?"absolute pr-10 text-label mt-2 text-md font-light rounded-lg bg-dark py-4":"absolute pr-10 text-white mt-2 text-md font-light rounded-lg bg-label py-4"}>
+                        <div style={{marginTop:"-120px", marginLeft:"44px"}} className={dark?"absolute pr-10 text-label mt-2 text-md font-light rounded-lg bg-dark py-4":"absolute pr-10 text-white mt-2 text-md font-light rounded-lg bg-violet py-4"}>
                             <div className="w-full flex px-4">
                                 <span className="py-1 px-4 flex rounded-md w-full hover:bg-primary ">
                                 <a href="https://swerve.fi" >Website</a>
@@ -143,7 +143,7 @@ const Sidebar = () => {
                                 </span>
                             </div>
                             <div className="w-full px-4">
-                            <span className={dark?"text-sm text-white text-white pt-1 px-4 flex rounded-md w-full":"text-sm text-black pt-1 px-4 flex rounded-md w-full"}>
+                            <span className={dark?"text-sm text-white text-white pt-1 px-4 flex rounded-md w-full":"text-sm text-label pt-1 px-4 flex rounded-md w-full"}>
                                 Social
                                 </span>
                             </div>
@@ -163,7 +163,7 @@ const Sidebar = () => {
                                 </span>
                             </div>
                             <div className="w-full px-4">
-                            <span className={dark?"text-sm text-white text-white pt-1 px-4 flex rounded-md w-full":"text-sm text-black pt-1 px-4 flex rounded-md w-full"}>
+                            <span className={dark?"text-sm text-white text-white pt-1 px-4 flex rounded-md w-full":"text-sm text-label pt-1 px-4 flex rounded-md w-full"}>
                                 Trade
                                 </span>
                             </div>

@@ -35,7 +35,7 @@ const Home = () => {
                     <div style={{backgroundColor:"#D2F4E8"}} className={showMsg? "border mb-3 py-3 px-6 w-full flex justify-between cursor-pointer rounded-lg":"hidden"}>
                     <div className="flex">
                     <img src={gitcoinlogo} alt="" style={{height:"25px", width:"25px"}} />
-                    <div className="ml-2 text-blue text-lg">Support DeFi SURF on Gitcoin Grants!</div>
+                    <div className="ml-2 text-blue text-lg">Support Boot Finance on Gitcoin Grants!</div>
                     </div>
                     <div onClick={()=>{setShowMsg(false)}} className="text-lightDark flex items-center hover:text-black"><ImCross/></div>
                     </div>
@@ -66,7 +66,7 @@ const Home = () => {
 
                 <div className="mt-5"></div>
                 <div className="mt-6 text-underlinecl shadow-2xl">
-                    <div className={dark?"bg-dark rounded-t-lg py-3 pl-5 text-blue text-md font-bold tracking-wider":"bg-label rounded-t-lg py-3 pl-5 text-white text-md font-bold tracking-wider"}>
+                    <div className={dark?"bg-dark rounded-t-lg py-3 pl-5 text-blue text-md font-bold tracking-wider":"bg-violet rounded-t-lg py-3 pl-5 text-white text-md font-bold tracking-wider"}>
                         All Data
                     </div>
                     <div className="bg-white overflow-x-auto pb-5 text-black px-5 pt-3 rounded-b-lg">
@@ -102,13 +102,15 @@ const Home = () => {
                     <TableBrowsePg/>
                     <div className="flex justify-between pt-4">
                         <div className="flex items-center">
-                            <div className="text-xl text-gray-500">Showing 0 to 0 of 0 entries (filtered from 1,191 total entries)</div>
+                            <div className="text-xl text-gray-500">Showing 0 to 0 of 0 entries ( filtered from 1,191 total entries )</div>
                         </div>
                         <div className="flex items-center text-gray-500">
                             <div className="text-xl rounded-l text-gray-500 border py-1 px-2 cursor-pointer">Previous</div>
                             <div className="text-xl border py-1 px-3 text-white bg-blue border-blue cursor-pointer">1</div>
                             <div className="text-xl border py-1 px-3 text-blue cursor-pointer">2</div>
                             <div className="text-xl border py-1 px-3 text-blue cursor-pointer">3</div>
+                            <div className="text-xl border py-1 px-3 text-blue cursor-pointer">4</div>
+                            <div className="text-xl border py-1 px-3 text-blue cursor-pointer">5</div>
                             <div className="text-xl rounded-r text-blue border py-1 px-2 cursor-pointer">Next</div>
                         </div>
                     </div>
